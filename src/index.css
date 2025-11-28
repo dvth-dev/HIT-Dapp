@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0 64px;
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    color: white;
+    @apply bg-background;
+  }
+}
+
+@theme {
+  /* Fonts */
+  --font-main: "Inter", sans-serif;
+
+  /* Colors */
+  --color-background: #0a0a0f;
+  --color-success: #2cb67d;
+  --color-failed: #f87171;
+  --color-pending: #ffc700;
+  --color-title-1: #d1d5db;
+  --color-text: #a49db9;
+  --color-text-2: #9ca3af;
+  --color-card: #1f1f2e;
+  --color-card-border: #494953;
+}
+
+@layer components {
+  .data-row > td > div {
+    @apply my-6 mx-4 text-lg;
+  }
+
+  .data-row:not(:last-child) > td {
+    @apply border-b border-card-border;
+  }
+}
+
+@layer utilities {
+  .tx-success {
+    @apply bg-success/10 my-4 text-center rounded-full text-sm text-success py-1.5 capitalize;
+  }
+
+  .tx-failed {
+    @apply bg-failed/10 my-4 text-center rounded-full text-sm text-failed py-1.5 capitalize;
+  }
+
+  .tx-pending {
+    @apply bg-pending/10 my-4 text-center rounded-full text-sm text-pending py-1.5 capitalize;
+  }
+}

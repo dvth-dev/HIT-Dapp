@@ -1,4 +1,5 @@
 import logo from "@assets/logo.png";
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { NavBarItems } from "@utils/contains.ts";
 // import BalanceCard from "../components/BalanceCard";
 const NavBar = () => {
@@ -28,6 +29,7 @@ const NavBar = () => {
 
         {/* ETH Balance + Address */}
         {/* <BalanceCard /> */}
+        <ConnectButton />
       </div>
     </section>
   );

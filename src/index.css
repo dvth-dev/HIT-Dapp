@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@rainbow-me/rainbowkit/styles.css";
 
 @layer base {
   *,
@@ -17,6 +18,10 @@
     line-height: 1.5;
     color: white;
     @apply bg-background;
+  }
+
+  body[data-scroll-locked] {
+    padding: 0 64px !important;
   }
 }
 

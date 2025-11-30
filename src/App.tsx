@@ -1,3 +1,4 @@
+import Example1 from "./examples/Example-1";
 import NavBar from "./sections/NavBarSection";
 import OverviewSection from "./sections/OverviewSection";
 import TransactionSection from "./sections/TransactionSection";
